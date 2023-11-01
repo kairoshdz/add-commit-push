@@ -2,8 +2,8 @@ import os
 
 print('Add, Commit, Push\n')
 
-print('git status\n')
-os.system('git status')
+#print('git status\n')
+#os.system('git status')
 
 print('git add -A')
 os.system('git add -A')
