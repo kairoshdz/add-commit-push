@@ -8,6 +8,15 @@ import sys
 print("testing")
 numofArgs = len(sys.argv)
 print('Total Arguments Passed: ', numofArgs)
+
+if numofArgs == 2:
+    print("Do you want to continue with add commit push? (y to continue):")
+    confirm = input()
+    if confirm !="y":
+        print("Canceling", confirm)
+    quit()
+    
+
 if numofArgs >= 3:
     if sys.argv[1] == "-m":
         commitMessage = input('Enter your message: ')
