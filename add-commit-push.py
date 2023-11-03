@@ -11,7 +11,7 @@ print('Total Arguments Passed: ', numofArgs)
 if numofArgs >= 3:
     if sys.argv[1] == "-m":
         commitMessage = input('Enter your message: ')
-    elif sys.argv[1] == "-f":
+    elif sys.argv[1] != "-f":
         print("Do you want to continue with add commit push? (y to continue):")
         confirm = input()
         if confirm !="y":
