@@ -28,12 +28,13 @@ os.system('git status')
 
 def acp():
     print(f'{magenta}Add, Commit, Push\n {reset}')
-    print(f'{green}git add -A {reset}')
+    print(f'{green}git add -A {reset}\n')
     os.system('git add -A')
     print(f'{green}git commit -m  + {commitMessage} {reset}')
     os.system('git commit -m' + commitMessage)
     print(f'{green}git push {reset}')
     os.system('git push')
+    print(f"{magenta} Add, Commit, Push: Complete {reset}")
 
 
 if numofArgs == 1:
