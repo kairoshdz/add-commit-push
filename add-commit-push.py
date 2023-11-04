@@ -10,6 +10,12 @@ import sys
 # os.system(echo 'alias acp="python3 /Users/kairos8ight/Lewis/cpsc-20000/sprint5/add-commit-push"' >> ~/.zshrc)
 # os.system('source ~/.zshrc)
 
+#text colors, for clarity and accessibility
+red = '\033[91m'
+yellow = '\033[93m'
+green = '\033[92m'
+reset = '\033[0m'
+
 #default value for commit message
 commitMessage = '"Update files"'
 
@@ -29,7 +35,7 @@ def acp():
     os.system('git push')
 
 if numofArgs == 1:
-    print("Do you want to continue with add commit push? (y to continue):")
+    print(f"{red}Do you want to continue with add commit push? (y to continue):{reset}")
     confirm = input()
     if confirm !="y":
         print("Canceling", confirm)
@@ -39,18 +45,22 @@ if numofArgs == 1:
 
 if numofArgs >= 2:
     if sys.argv[1] == "-m":
-        commitMessage = input('Enter your message: ')
+        commitMessage = input(f'{green} Enter your message: {reset}')
         commitMessage = '"' + commitMessage + '"'
-        acp()
-    elif sys.argv[1] != "-f":
+        print(f"{yellow}Do you want to continue with add commit push? (y to continue):{reset}")
+        confirm = input()
+        if confirm !="y":
+            print(f'{red}Canceling, confirm {reset}')
+            acp()
+    elif sys.argv[1] != '-f':
        acp()
 
 
     
 if numofArgs == 3:
-    if sys.argv [2] != '-f':
+    if sys.argv [2] != "-f":
         if sys.argv [1] == "-m":
-            commitMessage = input('Enter your message: ')
+            commitMessage = input(f'{green}Enter your message: {reset}')
             commitMessage = '"' + commitMessage + '"'
             acp()
 
