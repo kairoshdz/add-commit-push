@@ -14,7 +14,7 @@ import sys
 red = '\033[91m'
 yellow = '\033[93m'
 green = '\033[92m'
-magenta = '\033[93m]'
+magenta = '\033[95m'
 reset = '\033[0m'
 
 #default value for commit message
@@ -30,10 +30,11 @@ def acp():
     print(f'{magenta}Add, Commit, Push\n {reset}')
     print(f'{green}git add -A {reset}')
     os.system('git add -A')
-    print(f'{green} git commit -m  + {commitMessage} {reset}')
+    print(f'{green}git commit -m  + {commitMessage} {reset}')
     os.system('git commit -m' + commitMessage)
     print(f'{green}git push {reset}')
     os.system('git push')
+
 
 if numofArgs == 1:
     print(f"{yellow}Do you want to continue with add commit push? (y to continue):{reset}")
