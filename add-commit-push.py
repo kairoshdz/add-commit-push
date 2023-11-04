@@ -39,12 +39,13 @@ def acp():
 
 # one argument 
 if numofArgs == 1:
-    print(f"{yellow}Do you want to continue with add commit push? git add -A, git commit -m {commitMessage} and git push will be run. (y to continue):{reset}")
+    print(f'{yellow}Do you want to continue with add commit push? git add -A, git commit -m {commitMessage} and git push will be run. (y to continue):{reset}')
     confirm = input()
     if confirm !="y":
         print(f'{red} Canceling, {confirm} {reset}')
         quit()
-    else: acp()
+    else: 
+         acp()
     
 # two arguments
 if numofArgs == 2:
@@ -55,8 +56,9 @@ if numofArgs == 2:
         confirm = input()
         if confirm !="y":
             print(f'{red}Canceling, {confirm} {reset}')
+        else: acp()
     elif sys.argv[1] == "-f":
-       acp()
+        acp()
 
 
 # three arguments
