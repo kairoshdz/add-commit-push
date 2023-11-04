@@ -17,7 +17,7 @@ def acp():
     print('git add -A')
     os.system('git add -A')
     print('git commit -m + "{commitMessage}"')
-    os.system('git commit -m "{commitMessage}"')
+    os.system('git commit -m' + '"{commitMessage}"')
     print('git push')
     os.system('git push')
 
