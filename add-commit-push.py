@@ -16,8 +16,8 @@ def acp():
     os.system('git status')
     print('git add -A')
     os.system('git add -A')
-    print('git commit -m + "{commitMessage}"')
-    os.system('git commit -m' + '"{commitMessage}"')
+    print('git commit -m' + commitMessage)
+    os.system('git commit -m' + commitMessage)
     print('git push')
     os.system('git push')
 
@@ -33,6 +33,7 @@ if numofArgs == 1:
 if numofArgs >= 2:
     if sys.argv[1] == "-m":
         commitMessage = input('Enter your message: ')
+        commitMessage = '"' + commitMessage + '"'
         acp()
     elif sys.argv[1] != "-f":
        acp()
@@ -43,5 +44,6 @@ if numofArgs == 3:
     if sys.argv [2] != '-f':
         if sys.argv [1] == "-m":
             commitMessage = input('Enter your message: ')
+            commitMessage = '"' + commitMessage + '"'
             acp()
 
