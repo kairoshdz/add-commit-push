@@ -24,7 +24,7 @@ numofArgs = len(sys.argv)
 print('Total Arguments Passed: ', numofArgs)
 
 print('git status\n')
-os.system(f'{green} git status{reset}')
+os.system(f'{green}git status{reset}')
 
 def acp():
     print(f'{magenta}Add, Commit, Push\n {reset}')
