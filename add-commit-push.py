@@ -38,7 +38,7 @@ if numofArgs == 1:
     print(f"{red}Do you want to continue with add commit push? (y to continue):{reset}")
     confirm = input()
     if confirm !="y":
-        print("Canceling", confirm)
+        print(f'Canceling, {confirm}')
         quit()
     else: acp()
     
@@ -50,7 +50,7 @@ if numofArgs >= 2:
         print(f"{yellow}Do you want to continue with add commit push? (y to continue):{reset}")
         confirm = input()
         if confirm !="y":
-            print(f'{red}Canceling, confirm {reset}')
+            print(f'{red}Canceling, {confirm} {reset}')
             acp()
     elif sys.argv[1] != '-f':
        acp()
