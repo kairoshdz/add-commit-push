@@ -5,43 +5,42 @@ import sys
 # os.system(echo 'alias acp="python3 /Users/kairos8ight/Lewis/cpsc-20000/sprint5/add-commit-push"' >> ~/.zshrc)
 # os.system('source ~/.zshrc)
 
+commitMessage = '"Update files"'
+
 numofArgs = len(sys.argv)
 print('Total Arguments Passed: ', numofArgs)
 
-if numofArgs == 2:
+def acp():
+    print('Add, Commit, Push\n')
+    print('git status\n')
+    os.system('git status')
+    print('git add -A')
+    os.system('git add -A')
+    print('git commit -m + "{commitMessage}"')
+    os.system('git commit -m "{commitMessage}"')
+    print('git push')
+    os.system('git push')
+
+if numofArgs == 1:
     print("Do you want to continue with add commit push? (y to continue):")
     confirm = input()
     if confirm !="y":
         print("Canceling", confirm)
-    quit()
+        quit()
+    else: acp()
     
 
-if numofArgs >= 3:
+if numofArgs >= 2:
     if sys.argv[1] == "-m":
         commitMessage = input('Enter your message: ')
     elif sys.argv[1] != "-f":
-        print("Do you want to continue with add commit push? (y to continue):")
-        confirm = input()
-        if confirm !="y":
-            print("Canceling", confirm)
-    else:
-        commitMessage = '"Update files"'
+       acp()
+
 
     
-if numofArgs >= 4:
-        if sys.argv [3] != '-f':
-            print("Do you want to continue with add commit push? (y to continue):")
-            confirm = input()
-        if confirm !="y":
-            print("Canceling", confirm)
-        quit()
+if numofArgs == 3:
+    if sys.argv [1] == "-m":
+        commitMessage = input('Enter your message: ')
+    if sys.argv [2] != '-f':
+        acp()
 
-print('Add, Commit, Push\n')
-print('git status\n')
-os.system('git status')
-print('git add -A')
-os.system('git add -A')
-print('git commit -m + "{commitMessage}"')
-os.system('git commit -m "{commitMessage}"')
-print('git push')
-os.system('git push')
