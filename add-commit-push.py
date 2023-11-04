@@ -5,7 +5,7 @@ import sys
 # os.system(echo 'alias acp="python3 /Users/kairos8ight/Lewis/cpsc-20000/sprint5/add-commit-push"' >> ~/.zshrc)
 # os.system('source ~/.zshrc)
 
-print("testing")
+#print("testing")
 numofArgs = len(sys.argv)
 print('Total Arguments Passed: ', numofArgs)
 
