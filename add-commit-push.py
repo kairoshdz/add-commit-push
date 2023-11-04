@@ -33,6 +33,7 @@ if numofArgs == 1:
 if numofArgs >= 2:
     if sys.argv[1] == "-m":
         commitMessage = input('Enter your message: ')
+        acp()
     elif sys.argv[1] != "-f":
        acp()
 
