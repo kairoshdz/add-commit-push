@@ -23,8 +23,8 @@ commitMessage = '"Update files"'
 numofArgs = len(sys.argv)
 print('Total Arguments Passed: ', numofArgs)
 
-print('git status')
-os.system(f'{green}git status{reset}')
+print(f'{green}git status{reset}')
+os.system('git status')
 
 def acp():
     print(f'{magenta}Add, Commit, Push\n {reset}')
