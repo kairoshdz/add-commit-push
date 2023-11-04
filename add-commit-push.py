@@ -46,7 +46,7 @@ if numofArgs == 1:
     else: acp()
     
 
-if numofArgs >= 2:
+if numofArgs == 2:
     if sys.argv[1] == "-m":
         commitMessage = input(f'{green} Enter your message: {reset}')
         commitMessage = '"' + commitMessage + '"'
@@ -65,9 +65,11 @@ if numofArgs == 3:
             commitMessage = '"' + commitMessage + '"'
             if sys.argv [1] == "-f":
                 acp()
-    elif sys.argv [2] != "-f":
-        if sys.argv [1] == "-m":
+    elif sys.argv [1] == "-m":
             commitMessage = input(f'{green}Enter your message: {reset}')
             commitMessage = '"' + commitMessage + '"'
-            acp()
+            if sys.argv [2] == "-f":
+                acp()
+
+
 
