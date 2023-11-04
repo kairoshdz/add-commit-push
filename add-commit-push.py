@@ -60,7 +60,12 @@ if numofArgs >= 2:
 
     
 if numofArgs == 3:
-    if sys.argv [2] != "-f":
+    if sys.argv [2] == "-m":
+            commitMessage = input(f'{green}Enter your message: {reset}')
+            commitMessage = '"' + commitMessage + '"'
+            if sys.argv [1] == "-f":
+                acp()
+    elif sys.argv [2] != "-f":
         if sys.argv [1] == "-m":
             commitMessage = input(f'{green}Enter your message: {reset}')
             commitMessage = '"' + commitMessage + '"'
